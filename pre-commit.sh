@@ -26,7 +26,7 @@ ENABLE=$(git config --bool hooks.gitleaks-enable)
 
 # ENABLE option check
 if [ "$ENABLE" != "true" ]; then
-    echo "Advance: Re-verification of the visibility of secrets in the code of the code. To enable, type the command: git config hooks.gitleaks-enable true"
+    echo "Secret visibility verification. Type the command: "git config hooks.gitleaks-enable true" in order to enable this option"
     exit 0
 fi
 
