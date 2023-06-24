@@ -32,6 +32,8 @@ fi
 
 if [ $? -eq 0 ]; then
     echo "Secret has been detected. Sensitive data will not pass. Take proper security actions in order to proceed."
+else
+    echo "Secret has not been detected. Security actions have been taken."
     exit 1
 fi
 
