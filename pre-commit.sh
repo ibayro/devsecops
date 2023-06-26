@@ -8,7 +8,7 @@ command -v gitleaks >/dev/null 2>&1 || {
         curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks_8.17.0_linux_x64.tar.gz | tar -xvz
         export PATH=$(pwd):$PATH
     elif [[ "$OSTYPE" == "darwin"* ]]; then
-        curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks_8.17.0_darwin_arm64.tar.gz | tar -xvz
+        curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks_8.17.0_darwin_arm64.tar.gz | tar -xz
         export PATH=$(pwd):$PATH
     elif [[ "$OSTYPE" == "win32"* ]]; then
         curl -sSfL https://github.com/gitleaks/gitleaks/releases/download/v8.17.0/gitleaks_8.17.0_windows_arm64.zip | tar -xvz
