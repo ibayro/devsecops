@@ -9,7 +9,7 @@ This branch contains a pre-commit script that installs gitleaks on a local machi
 
 2. Move the script to the `.git/hooks` directory of your working Git repository:
    ```
-   mv pre-commit.sh .git/hooks/pre-commit.sh
+   mv pre-commit.sh .git/hooks/pre-commit
    ```
 
 3. Optionally, you can configure Git to automatically enable the pre-commit hook by setting the `core.hooksPath` configuration:
