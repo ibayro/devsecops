@@ -12,9 +12,15 @@ This branch contains a pre-commit script that installs gitleaks on a local machi
    mv pre-commit.sh .git/hooks/pre-commit
    ```
 
-3. Optionally, you can configure Git to automatically enable the pre-commit hook by setting the `core.hooksPath` configuration:
+3. `git config hooks.gitleaks-enable true` enables the hook to work automatically.
+    ```
+   git config hooks.gitleaks-enable true
+   ```
+   If not enabled, the hook will not work until manually triggered.
+
+4. Optionally, you can configure Git to automatically enable the pre-commit hook by setting the `core.hooksPath` configuration:
    ```
    git config core.hooksPath .git/hooks
    ```
 
-4. Whenever you make a commit in your repository, the pre-commit hook script will be executed, and it will run gitleaks to check for secrets. If any secrets are found, the commit will be rejected; otherwise, the commit will be allowed.
+5. Whenever you make a commit in your repository, the pre-commit hook script will be executed, and it will run gitleaks to check for secrets. If any secrets are found, the commit will be rejected; otherwise, the commit will be allowed.
